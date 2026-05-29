@@ -390,14 +390,11 @@ nav_options = [
     "🤖  AI Assistant Chatbot",
 ]
 
-# Initialise nav index on first load
-if "_nav_idx" not in st.session_state:
-    st.session_state["_nav_idx"] = 0
+# Initialise radio state on first load
+if "_nav_radio" not in st.session_state:
+    st.session_state["_nav_radio"] = nav_options[0]
 
-module = st.sidebar.radio("", nav_options, index=st.session_state["_nav_idx"])
-
-# Keep _nav_idx in sync with manual sidebar clicks
-st.session_state["_nav_idx"] = nav_options.index(module)
+module = st.sidebar.radio("", nav_options, key="_nav_radio")
 
 st.sidebar.markdown("<hr style='border-color:rgba(255,255,255,0.12);margin:1rem 0;'>", unsafe_allow_html=True)
 
@@ -649,7 +646,7 @@ if "Risk Assessment" in module:
         </div>
         """, unsafe_allow_html=True)
         if st.button("➡️  Continue to Screening Checklist for " + (p_name or "Patient"), use_container_width=True):
-            st.session_state["_nav_idx"] = nav_options.index("✅  Screening Checklist")
+            st.session_state["_nav_radio"] = "✅  Screening Checklist"
             st.rerun()
 
 
@@ -799,7 +796,7 @@ elif "Screening Checklist" in module:
                         f"{rf_count} red flag(s) detected", done=True, urgent=rf_count>=3)
 
         if st.button("➡️  Continue to Referral Intelligence", use_container_width=True):
-            st.session_state["_nav_idx"] = nav_options.index("🔀  Referral Intelligence")
+            st.session_state["_nav_radio"] = "🔀  Referral Intelligence"
             st.rerun()
 
     if st.button("🔄 Restart Checklist"):
@@ -981,7 +978,7 @@ elif "Referral" in module:
                     }],
                 })
             st.success(f"✅ Referral saved. {lr['patient']} is now in the Follow-Up Tracker.")
-            st.session_state["_nav_idx"] = nav_options.index("🔔  Follow-Up Tracker")
+            st.session_state["_nav_radio"] = "🔔  Follow-Up Tracker"
             st.rerun()
 
 
@@ -1122,7 +1119,7 @@ elif "Follow-Up" in module:
                     "risk":row["risk"],"id":row["id"],
                 }
                 st.session_state.grace_demo = False
-                st.session_state["_nav_idx"] = nav_options.index("🩺  Risk Assessment")
+                st.session_state["_nav_radio"] = "🩺  Risk Assessment"
                 st.rerun()
 
     # Add patient manually
