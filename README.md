@@ -28,6 +28,14 @@ This is not a knowledge problem. It is a **point-of-care support problem.**
 A fully connected, 5-module clinical decision support platform built in Python & Streamlit. 
 Every module feeds the next, one patient, one journey, zero re-entering data.
 
+### Snippet
+
+<img width="1203" height="572" alt="image" src="https://github.com/user-attachments/assets/f266ac47-23ba-4169-bdbf-2408f088da62" />
+
+### Live Demo
+
+https://breastcarekenya.streamlit.app/
+
 ```
 🩺 Risk Assessment
       ↓  (patient context + symptoms flow forward)
