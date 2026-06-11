@@ -72,20 +72,6 @@ A **7-module, fully connected, offline-first** clinical decision support platfor
 🤖 CareBot  ←  rule-based clinical NLP · no API needed (NEW)
 ```
 
-
-## 🆕 What's New in v2.0
-
-### 🏠 Home Page — Impact First
-Recruiters and users no longer land on a form. The new Home module opens with:
-- A cinematic hero banner with the KAP impact statistics
-- Live KAP gap chart with the 36-point gap annotated
-- 6-module overview with descriptions
-- Overdue patient alerts surfaced immediately
-- Quick-start buttons (New Assessment / Run Demo / Analytics)
-
-### 🤖 CareBot — Offline Clinical AI (Zero API Keys)
-The most significant upgrade. CareBot is a rule-based NLP engine with an **11-topic clinical knowledge base** — no API key, no internet, no cost. It answers questions about:
-
 | Topic | Coverage |
 |:---|:---|
 | 🔴 Risk Factors | Non-modifiable & modifiable risks, BRCA, protective factors |
