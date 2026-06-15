@@ -45,7 +45,7 @@ Our original research with **250 Kenyan health practitioners** revealed a striki
 | Clinical Officers | 31% |
 | Doctors | 44% |
 
-Practitioners **know** about breast cancer. They **want** to act. But there is a **36-point gap** between attitude and practice — especially for CHWs and nurses who are the first point of contact in most Kenyan facilities.
+Practitioners **know** about breast cancer. They **want** to act. But there is a **gap** between attitude and practice — especially for CHWs and nurses who are the first point of contact in most Kenyan facilities.
 
 This is not a knowledge problem. It is a **point-of-care support problem.**
 
